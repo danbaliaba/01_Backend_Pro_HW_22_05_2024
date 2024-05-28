@@ -14,12 +14,20 @@ public class CarRepositoryList implements CarRepository{
 
     public CarRepositoryList(){
         database.add(new Car(50_000, "BMW", new BigDecimal(30_000), "AA1213XQ"));
-        database.add(new Car(100_000, "Mercedes", new BigDecimal(35_000), "AA1213XQ"));
-        database.add(new Car(10_000, "Audi", new BigDecimal(50_000), "AA1213XQ"));
+        database.add(new Car(100_000, "Mercedes", new BigDecimal(35_000), "AL1223423Q"));
+        database.add(new Car(10_000, "Audi", new BigDecimal(50_000), "AK234HWM"));
     }
     @Override
-    public Car showById(int index) {
-        return database.get(index);
+    public Car showById(String idNum) {
+
+        Car car = null;
+
+        for(Car cars : database){
+            if(cars.getId().contains(idNum)){
+                car = cars;
+            }
+        }
+        return car;
     }
 
 

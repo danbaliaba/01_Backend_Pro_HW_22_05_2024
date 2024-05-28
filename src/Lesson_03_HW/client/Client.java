@@ -13,7 +13,7 @@ public class Client {
 
         CarController controller = context.getBean(CarController.class);
 
-        Car car = controller.showById(1);
+        Car car = controller.showById("AK234HWM");
 
         System.out.println(car);
 

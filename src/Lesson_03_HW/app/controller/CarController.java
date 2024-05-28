@@ -13,7 +13,7 @@ public class CarController {
         this.service = service;
     }
 
-    public Car showById(int id){
-        return service.showById(id);
+    public Car showById(String idNum){
+        return service.showById(idNum);
     }
 }

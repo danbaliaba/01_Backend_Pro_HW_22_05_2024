@@ -20,8 +20,8 @@ public class CarServiceImpl implements CarService{
     }
 
     @Override
-    public Car showById(int id) {
-        Car car = repository.showById(id);
+    public Car showById(String idNum) {
+        Car car = repository.showById(idNum);
         setVin(car);
         return car;
     }

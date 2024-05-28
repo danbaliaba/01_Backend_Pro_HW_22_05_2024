@@ -4,5 +4,5 @@ import Lesson_03_HW.app.domain.Car;
 
 public interface CarService {
 
-    public Car showById(int id);
+    public Car showById(String id);
 }
